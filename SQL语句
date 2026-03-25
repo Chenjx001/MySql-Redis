@@ -9,3 +9,15 @@ DELETE FROM {数据表}
 WHERE id IN (SELECT id FROM {临时表});
 
 DROP TEMPORARY TABLE {临时表};
+
+
+
+建表语句CREATE TABLE cert (
+  id INT  UNIQUE AUTO_INCREMENT,
+  domain VARCHAR(255)  NULL,
+  fingerprint VARCHAR(255) NULL,
+  issuer VARCHAR(255) NULL,
+  expiration_date DATE NULL,
+  remaining_days INT NULL,
+  PRIMARY KEY (id)
+);
